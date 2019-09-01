@@ -39,6 +39,7 @@
           {{ if .url }}</a>{{ end }}
         </h3>
         {{ end }}
+        {{ with $person.pgp }}<h3 itemprop="jobTitle">{{ . | markdownify | emojify }}</h3>{{ end }}
       </div>
 
       <link itemprop="url" href="{{ .Permalink }}">
